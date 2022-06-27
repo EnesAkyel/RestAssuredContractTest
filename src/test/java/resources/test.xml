@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test">
+    <test name="contract-test-cases" preserve-order="false" parallel="classes" thread-count="5">
+        <classes>
+            <class name="tests.java.FilterCharactersTest"/>
+            <class name="tests.java.GetAllCharactersTest"/>
+            <class name="tests.java.GetASingleLocationTest"/>
+            <class name="tests.java.GetMultipleEpisodesTest"/>
+        </classes>
+    </test>
+</suite>
