@@ -77,4 +77,4 @@ GitHub Actions runs the full suite on every push and pull request to `master`. T
 2. Runs `mvn test`
 3. Generates and uploads the Allure report as a downloadable artifact (retained 30 days)
 
-See [`.github/workflows/tests.yml`](.github/workflows/tests.yml).
+See [`.github/workflows/contract-tests.yml`](.github/workflows/contract-tests.yml).
