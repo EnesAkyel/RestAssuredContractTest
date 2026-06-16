@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Rick and Morty Contract Test Suite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test name="contract-test-cases" preserve-order="false" parallel="classes" thread-count="5">
+        <classes>
+            <class name="tests.api.GetAllCharactersTest"/>
+            <class name="tests.api.FilterCharactersTest"/>
+            <class name="tests.api.GetASingleLocationTest"/>
+            <class name="tests.api.GetMultipleEpisodesTest"/>
+            <class name="tests.api.NegativeContractTest"/>
+        </classes>
+    </test>
+</suite>
