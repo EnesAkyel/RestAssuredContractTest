@@ -8,6 +8,7 @@
             <class name="tests.api.GetAllCharactersTest"/>
             <class name="tests.api.FilterCharactersTest"/>
             <class name="tests.api.GetASingleLocationTest"/>
+            <class name="tests.api.GetMultipleLocationsTest"/>
             <class name="tests.api.GetMultipleEpisodesTest"/>
             <class name="tests.api.NegativeContractTest"/>
         </classes>

@@ -2,6 +2,7 @@ package tests.api;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
@@ -14,6 +15,7 @@ import static org.hamcrest.Matchers.lessThan;
 import static org.hamcrest.Matchers.not;
 
 @Feature("Locations API")
+@Story("Get Single Location")
 public class GetASingleLocationTest extends BaseTest {
 
     @DataProvider(name = "locationData")
