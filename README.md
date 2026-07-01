@@ -22,6 +22,7 @@ src/test/java/
 │   │   ├── GetAllCharactersTest.java
 │   │   ├── FilterCharactersTest.java
 │   │   ├── GetASingleLocationTest.java
+│   │   ├── GetMultipleLocationsTest.java
 │   │   ├── GetMultipleEpisodesTest.java
 │   │   └── NegativeContractTest.java
 │   ├── base/
@@ -45,6 +46,7 @@ src/test/java/
 | `GetAllCharactersTest` | `GET /character` | Schema + pagination metadata + field values |
 | `FilterCharactersTest` | `GET /character?name=&status=` | `@DataProvider` with 3 name/status combos; asserts all results match filter |
 | `GetASingleLocationTest` | `GET /location/{id}` | `@DataProvider` with 3 location IDs + expected names |
+| `GetMultipleLocationsTest` | `GET /location/3,21` | Array response — asserts both IDs present with correct fields |
 | `GetMultipleEpisodesTest` | `GET /episode/10,28` | Array response — asserts both IDs present with correct fields |
 | `NegativeContractTest` | Invalid IDs + no-match filter | 404 status + error body on all resource types |
 
@@ -71,7 +73,7 @@ CI uploads the report as a build artifact on every run — see the **Actions** t
 
 ## CI/CD
 
-GitHub Actions runs the full suite on every push and pull request to `master`. The workflow:
+GitHub Actions runs the full suite on every push and pull request to `main`. The workflow:
 
 1. Checks out the repo and sets up JDK 21
 2. Runs `mvn test`

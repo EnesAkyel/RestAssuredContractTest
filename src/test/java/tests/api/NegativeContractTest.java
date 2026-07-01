@@ -2,6 +2,7 @@ package tests.api;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
@@ -13,6 +14,7 @@ import static org.hamcrest.Matchers.lessThan;
 public class NegativeContractTest extends BaseTest {
 
     @Test
+    @Story("Invalid Character ID")
     @Description("Verify 404 with error body for a non-existent character ID")
     public void getCharacter_withInvalidId_returns404() {
         given()
@@ -26,6 +28,7 @@ public class NegativeContractTest extends BaseTest {
     }
 
     @Test
+    @Story("Invalid Location ID")
     @Description("Verify 404 with error body for a non-existent location ID")
     public void getLocation_withInvalidId_returns404() {
         given()
@@ -39,6 +42,7 @@ public class NegativeContractTest extends BaseTest {
     }
 
     @Test
+    @Story("Invalid Episode ID")
     @Description("Verify 404 with error body for a non-existent episode ID")
     public void getEpisode_withInvalidId_returns404() {
         given()
@@ -52,6 +56,7 @@ public class NegativeContractTest extends BaseTest {
     }
 
     @Test
+    @Story("No Matching Filter Results")
     @Description("Verify 404 when a character name filter returns no results")
     public void filterCharacters_withNoMatchingName_returns404WithErrorMessage() {
         given()

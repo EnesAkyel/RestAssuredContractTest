@@ -13,27 +13,27 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThan;
 import static org.hamcrest.Matchers.not;
 
-@Feature("Episodes API")
-@Story("Get Multiple Episodes")
-public class GetMultipleEpisodesTest extends BaseTest {
+@Feature("Locations API")
+@Story("Get Multiple Locations")
+public class GetMultipleLocationsTest extends BaseTest {
 
     @Test
-    @Description("Validate schema and that both requested episode IDs are returned for GET /episode/10,28")
-    public void getMultipleEpisodes_returnsAllRequestedEpisodesWithValidSchema() {
+    @Description("Validate schema and that both requested location IDs are returned for GET /location/3,21")
+    public void getMultipleLocations_returnsAllRequestedLocationsWithValidSchema() {
         given()
                 .spec(spec)
                 .when()
-                .get("/episode/10,28")
+                .get("/location/3,21")
                 .then()
                 .statusCode(200)
                 .time(lessThan(3000L))
-                .body(matchesJsonSchemaInClasspath("getMultipleEpisodesJsonResponse.json"))
+                .body(matchesJsonSchemaInClasspath("getMultipleLocationsJsonResponse.json"))
                 .body("size()", equalTo(2))
-                .body("[0].id", equalTo(10))
-                .body("[1].id", equalTo(28))
+                .body("[0].id", equalTo(3))
+                .body("[1].id", equalTo(21))
                 .body("[0].name", not(emptyString()))
                 .body("[1].name", not(emptyString()))
-                .body("[0].air_date", not(emptyString()))
-                .body("[1].air_date", not(emptyString()));
+                .body("[0].dimension", not(emptyString()))
+                .body("[1].dimension", not(emptyString()));
     }
 }
