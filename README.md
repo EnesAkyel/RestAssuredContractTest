@@ -4,14 +4,14 @@ API contract test suite built with REST Assured and TestNG, targeting the public
 
 ## Tech Stack
 
-| Tool | Version | Purpose |
-|---|---|---|
-| Java | 21 | Language |
-| REST Assured | 6.0.0 | HTTP client & assertions |
-| TestNG | 7.8.0 | Test runner & data providers |
-| Allure | 2.21.0 | Test reporting |
-| AspectJ | 1.9.19 | Allure step instrumentation |
-| Maven | 3.x | Build & dependency management |
+| Tool         | Version  | Purpose                       |
+|--------------|----------|-------------------------------|
+| Java         | 25       | Language                      |
+| REST Assured | 6.0.1    | HTTP client & assertions      |
+| TestNG       | 7.12.0   | Test runner & data providers  |
+| Allure       | 2.35.3   | Test reporting                |
+| AspectJ      | 1.9.25.1 | Allure step instrumentation   |
+| Maven        | 3.x      | Build & dependency management |
 
 ## Project Structure
 
@@ -41,14 +41,14 @@ src/test/java/
 
 **Layered assertions** — each test asserts HTTP status code, response time (< 3s), schema compliance, and specific field values.
 
-| Test Class | Endpoint | Technique |
-|---|---|---|
-| `GetAllCharactersTest` | `GET /character` | Schema + pagination metadata + field values |
-| `FilterCharactersTest` | `GET /character?name=&status=` | `@DataProvider` with 3 name/status combos; asserts all results match filter |
-| `GetASingleLocationTest` | `GET /location/{id}` | `@DataProvider` with 3 location IDs + expected names |
-| `GetMultipleLocationsTest` | `GET /location/3,21` | Array response — asserts both IDs present with correct fields |
-| `GetMultipleEpisodesTest` | `GET /episode/10,28` | Array response — asserts both IDs present with correct fields |
-| `NegativeContractTest` | Invalid IDs + no-match filter | 404 status + error body on all resource types |
+| Test Class                 | Endpoint                       | Technique                                                                   |
+|----------------------------|--------------------------------|-----------------------------------------------------------------------------|
+| `GetAllCharactersTest`     | `GET /character`               | Schema + pagination metadata + field values                                 |
+| `FilterCharactersTest`     | `GET /character?name=&status=` | `@DataProvider` with 3 name/status combos; asserts all results match filter |
+| `GetASingleLocationTest`   | `GET /location/{id}`           | `@DataProvider` with 3 location IDs + expected names                        |
+| `GetMultipleLocationsTest` | `GET /location/3,21`           | Array response — asserts both IDs present with correct fields               |
+| `GetMultipleEpisodesTest`  | `GET /episode/10,28`           | Array response — asserts both IDs present with correct fields               |
+| `NegativeContractTest`     | Invalid IDs + no-match filter  | 404 status + error body on all resource types                               |
 
 ## Running the Tests
 
@@ -75,7 +75,7 @@ CI uploads the report as a build artifact on every run — see the **Actions** t
 
 GitHub Actions runs the full suite on every push and pull request to `main`. The workflow:
 
-1. Checks out the repo and sets up JDK 21
+1. Checks out the repo and sets up JDK 25
 2. Runs `mvn test`
 3. Generates and uploads the Allure report as a downloadable artifact (retained 30 days)
 
