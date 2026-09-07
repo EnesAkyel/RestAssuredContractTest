@@ -9,7 +9,7 @@ API contract test suite built with REST Assured and TestNG, targeting the public
 | Java         | 25       | Language                      |
 | REST Assured | 6.0.1    | HTTP client & assertions      |
 | TestNG       | 7.12.0   | Test runner & data providers  |
-| Allure       | 2.35.3   | Test reporting                |
+| Allure       | 2.35.5   | Test reporting                |
 | AspectJ      | 1.9.25.1 | Allure step instrumentation   |
 | Maven        | 3.9.16   | Build & dependency management |
 
@@ -70,6 +70,16 @@ The suite runs test classes in parallel (5 threads) as configured in `test.xml`.
 After running `mvn test allure:report`, open `target/site/allure-maven-plugin/index.html`.
 
 CI uploads the report as a build artifact on every run — see the **Actions** tab.
+
+## Checking for Dependency Upgrades
+
+```bash
+# List dependencies with newer versions available
+mvn versions:display-dependency-updates
+
+# List available plugin updates
+mvn versions:display-plugin-updates
+```
 
 ## CI/CD
 
