@@ -9,7 +9,7 @@ API contract test suite built with REST Assured and TestNG, targeting the public
 | Java         | 25       | Language                      |
 | REST Assured | 6.0.1    | HTTP client & assertions      |
 | TestNG       | 7.12.0   | Test runner & data providers  |
-| Allure       | 2.35.5   | Test reporting                |
+| Allure       | 3.0.0    | Test reporting                |
 | AspectJ      | 1.9.25.1 | Allure step instrumentation   |
 | Maven        | 3.9.16   | Build & dependency management |
 
