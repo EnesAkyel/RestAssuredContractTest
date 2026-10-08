@@ -5,7 +5,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeClass;
 import tests.service.RequestBuilder;
 
-public class BaseTest {
+public class BaseSetUp {
 
     protected RequestSpecification spec;
 

@@ -4,7 +4,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-import tests.base.BaseTest;
+import tests.base.BaseSetUp;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.not;
 
 @Feature("Episodes API")
 @Story("Get Multiple Episodes")
-public class GetMultipleEpisodesTest extends BaseTest {
+public class GetMultipleEpisodesTest extends BaseSetUp {
 
     @Test
     @Description("Validate schema and that both requested episode IDs are returned for GET /episode/10,28")

@@ -4,7 +4,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-import tests.base.BaseTest;
+import tests.base.BaseSetUp;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -17,7 +17,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 @Feature("Characters API")
 @Story("Get All Characters")
-public class GetAllCharactersTest extends BaseTest {
+public class GetAllCharactersTest extends BaseSetUp {
 
     @Test
     @Description("Validate schema, pagination metadata, and first result fields for GET /character")
