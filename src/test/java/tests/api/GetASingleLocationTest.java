@@ -5,7 +5,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import tests.base.BaseTest;
+import tests.base.BaseSetUp;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.not;
 
 @Feature("Locations API")
 @Story("Get Single Location")
-public class GetASingleLocationTest extends BaseTest {
+public class GetASingleLocationTest extends BaseSetUp {
 
     @DataProvider(name = "locationData")
     public Object[][] locationData() {

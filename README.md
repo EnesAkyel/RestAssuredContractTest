@@ -26,7 +26,7 @@ src/test/java/
 │   │   ├── GetMultipleEpisodesTest.java
 │   │   └── NegativeContractTest.java
 │   ├── base/
-│   │   └── BaseTest.java           # Shared spec setup
+│   │   └── BaseSetUp.java           # Shared spec setup
 │   └── service/
 │       └── RequestBuilder.java     # Static spec factory
 └── resources/

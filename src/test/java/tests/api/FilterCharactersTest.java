@@ -5,7 +5,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import tests.base.BaseTest;
+import tests.base.BaseSetUp;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -18,7 +18,7 @@ import static org.hamcrest.Matchers.not;
 
 @Feature("Characters API")
 @Story("Filter Characters")
-public class FilterCharactersTest extends BaseTest {
+public class FilterCharactersTest extends BaseSetUp {
 
     @DataProvider(name = "characterFilters")
     public Object[][] characterFilters() {

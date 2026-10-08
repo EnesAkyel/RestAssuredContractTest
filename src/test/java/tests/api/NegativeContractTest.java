@@ -4,14 +4,14 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
-import tests.base.BaseTest;
+import tests.base.BaseSetUp;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThan;
 
 @Feature("Negative Tests")
-public class NegativeContractTest extends BaseTest {
+public class NegativeContractTest extends BaseSetUp {
 
     @Test
     @Story("Invalid Character ID")
