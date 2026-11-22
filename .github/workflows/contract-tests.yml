@@ -23,6 +23,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Verify Maven version
+        run: mvn --version
+
       - name: Run tests
         run: mvn test
 
